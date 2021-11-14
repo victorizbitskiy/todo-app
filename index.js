@@ -14,13 +14,16 @@ const hbs = exphbs.create({
 app.engine('hbs', hbs.engine)
 app.set('view engine', 'hbs')
 app.set('views', 'views')
+
 app.use(todoRoutes)
 
 async function start() {
   try {
-    await mongoose.connect(config.mongoUri, {
+    await mongoose.connect(
+      config.mongoUri, {
       useNewUrlParser: true,
-    })
+    }
+    )
 
     app.listen(PORT, () => {
       console.log(`Server has been started on PORT ${PORT}...`)
