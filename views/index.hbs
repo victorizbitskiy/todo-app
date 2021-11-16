@@ -2,19 +2,19 @@
 
 {{#if todos.length}}
   <ul>
-    {{! Итерация }}
+ 
     {{#each todos}}
       <li class="todo">
         <label>
-          {{#if complited}}
-            <input type="checkbox" checked />
-            <span class="complited">{{title}}</span>
+          {{#if completed}}
+            <input type="checkbox" checked name="completed"/>
+            <span class="completed">{{title}}</span>
           {{else}}
             <input type="checkbox" />
             <span>{{title}}</span>
           {{/if}}
 
-          <button class="btn btn-small">Save</button>
+          <button class="btn btn-small" type="submit">Save</button>
         </label>
       </li>
     {{/each}}
