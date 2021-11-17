@@ -11,7 +11,7 @@ const hbs = exphbs.create({
   defaultLayout: 'main',
   extname: 'hbs'
 })
-// Регистрируем движок
+// Регистрируем движок в экспрессе
 app.engine('hbs', hbs.engine)
 app.set('view engine', 'hbs')
 app.set('views', 'views')
